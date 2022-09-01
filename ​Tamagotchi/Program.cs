@@ -3,27 +3,10 @@ using System.Numerics;
 using Raylib_cs; //need to instal "Raylib_cs" on every procekt using "NuGetGallery"
 
 
-
-Raylib.InitWindow(800, 600, "hej");
-Raylib.SetTargetFPS(60);
+Tamagotchi T1 = new Tamagotchi();
 
 
-while (!Raylib.WindowShouldClose())
-{
-    Raylib.BeginDrawing();
+T1.hunger -= 1;
 
+Console.WriteLine($"T1 hunger: {T1.hunger}");
 
-    Raylib.ClearBackground(Color.WHITE);
-    
-    
-    ​Tamagotchi T1;
-
-    T1 = new ​Tamagotchi();
-
-
-    Console.WriteLine(T1);
-
-
-
-    Raylib.EndDrawing();
-}

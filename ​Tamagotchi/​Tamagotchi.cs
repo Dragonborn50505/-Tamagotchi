@@ -1,5 +1,19 @@
-public class ​Tamagotchi
+
+public class Tamagotchi
 {
-    Raylib.DrawCircle(100, 100, 100, Color.MAGENTA);
+    public int hunger;
+    public string name = "Tammy";
+
+
+
+  
+
+    public void timmer()
+    {
+        hunger ++;
+
+    }
+
+    
 
 }
