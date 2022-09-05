@@ -6,14 +6,14 @@ public class Tamagotchi
 
 
 
-  
+
 
     public void timmer()
     {
-        hunger ++;
+        hunger++;
 
     }
 
-    
+
 
 }
