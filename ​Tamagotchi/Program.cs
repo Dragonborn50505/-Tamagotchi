@@ -13,6 +13,8 @@ Console.WriteLine($"{T1.name}");
 // tamas.Add(new Tamagotchi());
 // tamas.Add(new Tamagotchi());
 
+
+
 while (T1.GetAlive() == true)
 {
     // välj tama
