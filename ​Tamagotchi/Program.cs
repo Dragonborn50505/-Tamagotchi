@@ -19,7 +19,7 @@ tamagotchis.Add(new Tamagotchi());
 List<string> name = new List<string>() {"Rex", "Cody", "Wolf"};
 Tamagotchi t1 = tamagotchis[0];
 t1.name = name[0];
-// t1.name = int name = generator.Next(2)
+// t1.name = name = generator.Next(2)
 
 
 while (t1.GetAlive() == true)
