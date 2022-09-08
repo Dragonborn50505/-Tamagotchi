@@ -15,6 +15,7 @@ public class Tamagotchi
     public Tamagotchi()
     {
         generator = new Random();
+        
         isAlive = true;
     }
 
@@ -44,6 +45,17 @@ public class Tamagotchi
             hunger = 0;
         }
     }
+
+
+
+    
+       
+    
+
+
+
+
+    
 
     public void Talk()
     {
@@ -79,3 +91,16 @@ public class Tamagotchi
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
