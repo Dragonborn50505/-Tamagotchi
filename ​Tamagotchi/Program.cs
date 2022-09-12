@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Numerics;
 using Raylib_cs; //need to instal "Raylib_cs" on every procekt using "NuGetGallery"
+Random generator = new Random();
 
 
-Console.WriteLine("Guten tag, welcome to Tamagotchi");
-// Console.WriteLine("You got a new Tamagotchi");
-// Tamagotchi t1 = new Tamagotchi();
-// Console.WriteLine("Chose a name of your Tamagotchi");
-// t1.name = Console.ReadLine();
-// Console.WriteLine($"{t1.name}");
+
+
+Console.ReadLine();
+
 
 List<Tamagotchi> tamagotchis = new List<Tamagotchi>();
 
@@ -16,16 +15,48 @@ tamagotchis.Add(new Tamagotchi());
 tamagotchis.Add(new Tamagotchi());
 tamagotchis.Add(new Tamagotchi());
 
-List<string> name = new List<string>() {"Rex", "Cody", "Wolf"};
-Tamagotchi t1 = tamagotchis[0];
-t1.name = name[0];
-// t1.name = name = generator.Next(2)
+List<string> name = new List<string>() { "Rex", "Cody", "Wolf" };
 
+int i = generator.Next(0, 2);
+tamagotchis[0].name = name[i];
+name.RemoveAt(i);
+tamagotchis[1].name = name[i];
+name.RemoveAt(i);
+tamagotchis[2].name = name[i];
+
+
+
+
+
+
+
+Tamagotchi t1 = tamagotchis[0];
+
+Console.WriteLine("Guten tag, welcome to Tamagotchi");
+Console.WriteLine("Pick which tamagatchi to hang out with");
+Console.WriteLine("Rex, Cody, Wolf");
+
+
+
+
+// foreach (Tamagotchi t in tamagotchis)
+// {
+//     if (t.name == Who)
+//     {
+//         t1 = t;
+//     }
+// }
+
+
+//if (Who == "Rex") {   t1 = tamagotchis[0];    }
+//if (Who = "Cody")   {   t1 = tamagotchis[1];    }
+//if (Who = "Wolf")   {   t1 = tamagotchis[3];    }
 
 while (t1.GetAlive() == true)
 {
     // välj tama
-    // T1 = tamas[2];
+    // t1 = tamas[2];
+    //t1.name = tamas.name
 
     Console.Clear();
     t1.stats();
@@ -58,36 +89,36 @@ while (t1.GetAlive() == true)
     {
         Console.WriteLine($"You left {t1.name} allone");
     }
-//    if (whatDo == "6")
-//    {
-//        int i = 0;
-//        foreach (Tamagotchi t in tamagotchis)
-//        {
-//            Console.WriteLine(i + ":" + t.name);
-//        }
-//
-//
-//        Console.WriteLine("which Tamagotchi would u like to play with?");
-//        string WhichTammy = Console.ReadLine();
-//
-//
-//        if (WhichTammy == "1" && Tamagotchi[0] == isAlive)
-//        {
-//            t1 = Tamagotchi[0] ;
-//
-//        }
-//         if (WhichTammy == "2" && Tamagotchi[1] == isAlive)
-//        {
-//            t1 = Tamagotchi[1];
-//
-//        }
-//         if (WhichTammy == "3" && Tamagotchi[2] == isAlive)
-//        {
-//            t1 = Tamagotchi[2];
-//
-//        }
-//
-//    }
+    //    if (whatDo == "6")
+    //    {
+    //        int i = 0;
+    //        foreach (Tamagotchi t in tamagotchis)
+    //        {
+    //            Console.WriteLine(i + ":" + t.name);
+    //        }
+    //
+    //
+    //        Console.WriteLine("which Tamagotchi would u like to play with?");
+    //        string WhichTammy = Console.ReadLine();
+    //
+    //
+    //        if (WhichTammy == "1" && Tamagotchi[0] == isAlive)
+    //        {
+    //            t1 = Tamagotchi[0] ;
+    //
+    //        }
+    //         if (WhichTammy == "2" && Tamagotchi[1] == isAlive)
+    //        {
+    //            t1 = Tamagotchi[1];
+    //
+    //        }
+    //         if (WhichTammy == "3" && Tamagotchi[2] == isAlive)
+    //        {
+    //            t1 = Tamagotchi[2];
+    //
+    //        }
+    //
+    //    }
     t1.timmer();
 }
 Console.WriteLine($"{t1.name} died ");
