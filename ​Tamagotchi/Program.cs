@@ -6,7 +6,6 @@ Random generator = new Random();
 
 
 
-Console.ReadLine();
 
 
 List<Tamagotchi> tamagotchis = new List<Tamagotchi>();
@@ -35,17 +34,17 @@ Tamagotchi t1 = tamagotchis[0];
 Console.WriteLine("Guten tag, welcome to Tamagotchi");
 Console.WriteLine("Pick which tamagatchi to hang out with");
 Console.WriteLine("Rex, Cody, Wolf");
+string Who = Console.ReadLine();
 
 
 
-
-// foreach (Tamagotchi t in tamagotchis)
-// {
-//     if (t.name == Who)
-//     {
-//         t1 = t;
-//     }
-// }
+ foreach (Tamagotchi t in tamagotchis)
+ {
+     if (t.name == Who)
+     {
+         t1 = t;
+     }
+ }
 
 
 //if (Who == "Rex") {   t1 = tamagotchis[0];    }
@@ -89,36 +88,14 @@ while (t1.GetAlive() == true)
     {
         Console.WriteLine($"You left {t1.name} allone");
     }
-    //    if (whatDo == "6")
-    //    {
-    //        int i = 0;
-    //        foreach (Tamagotchi t in tamagotchis)
-    //        {
-    //            Console.WriteLine(i + ":" + t.name);
-    //        }
-    //
-    //
-    //        Console.WriteLine("which Tamagotchi would u like to play with?");
-    //        string WhichTammy = Console.ReadLine();
-    //
-    //
-    //        if (WhichTammy == "1" && Tamagotchi[0] == isAlive)
-    //        {
-    //            t1 = Tamagotchi[0] ;
-    //
-    //        }
-    //         if (WhichTammy == "2" && Tamagotchi[1] == isAlive)
-    //        {
-    //            t1 = Tamagotchi[1];
-    //
-    //        }
-    //         if (WhichTammy == "3" && Tamagotchi[2] == isAlive)
-    //        {
-    //            t1 = Tamagotchi[2];
-    //
-    //        }
-    //
-    //    }
+    if (whatDo == "6")
+    {
+        Console.WriteLine($"{tamagotchis[0].name}, {tamagotchis[1].name}, {tamagotchis[2].name}");
+        if ()
+        {
+            
+        }
+    }
     t1.timmer();
 }
 Console.WriteLine($"{t1.name} died ");
