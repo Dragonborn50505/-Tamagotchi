@@ -14,14 +14,8 @@ tamagotchis.Add(new Tamagotchi());
 tamagotchis.Add(new Tamagotchi());
 tamagotchis.Add(new Tamagotchi());
 
-List<string> name = new List<string>() { "Rex", "Cody", "Wolf" };
 
-int i = generator.Next(0, 2);
-tamagotchis[0].name = name[i];
-name.RemoveAt(i);
-tamagotchis[1].name = name[i];
-name.RemoveAt(i);
-tamagotchis[2].name = name[i];
+
 
 
 
@@ -38,13 +32,13 @@ string Who = Console.ReadLine();
 
 
 
- foreach (Tamagotchi t in tamagotchis)
- {
-     if (t.name == Who)
-     {
-         t1 = t;
-     }
- }
+foreach (Tamagotchi t in tamagotchis)
+{
+    if (t.name == Who)
+    {
+        t1 = t;
+    }
+}
 
 
 //if (Who == "Rex") {   t1 = tamagotchis[0];    }
@@ -67,6 +61,7 @@ while (t1.GetAlive() == true)
     Console.WriteLine($"5. Do nothing");
     Console.WriteLine($"6. Visit other Tamagotchi");
     string whatDo = Console.ReadLine();
+
 
     if (whatDo == "1")
     {
@@ -91,16 +86,33 @@ while (t1.GetAlive() == true)
     if (whatDo == "6")
     {
         Console.WriteLine($"{tamagotchis[0].name}, {tamagotchis[1].name}, {tamagotchis[2].name}");
-        if ()
+        Who = Console.ReadLine();
+        if (Who == tamagotchis[0].name)
         {
-            
+            t1 = tamagotchis[0];
         }
+        if (Who == tamagotchis[1].name)
+        {
+            t1 = tamagotchis[1];
+        }
+        if (Who == tamagotchis[2].name)
+        {
+            t1 = tamagotchis[2];
+        }
+        
     }
-    t1.timmer();
+        t1.timmer();
 }
-Console.WriteLine($"{t1.name} died ");
+
+
+    if (t1.GetAlive() == false)
+    {
+        Console.WriteLine($"{t1.name} died ");
+    }
 
 
 
-Console.ReadLine();
+    Console.ReadLine();
+
+
 

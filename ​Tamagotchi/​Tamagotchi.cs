@@ -8,6 +8,7 @@ public class Tamagotchi
     public int bored;
     private List<string> words = new List<string>() { "Guten tag" };
 
+    static private List<string> names = new List<string>() { "Rex", "Cody", "Wolf" };
 
 
 
@@ -15,15 +16,20 @@ public class Tamagotchi
     public Tamagotchi()
     {
         generator = new Random();
-        
+
         isAlive = true;
+
+        int i = generator.Next(0, names.Count);
+        name = names[i];
+        names.RemoveAt(i);
+
     }
 
     public void boring()
     {
         Console.WriteLine($"You played with {name}");
-        bored = -3;
-        if (bored <= 0)
+        bored -= 3;
+        if (bored < 0)
         {
             bored = 0;
         }
@@ -39,7 +45,7 @@ public class Tamagotchi
 
     public void eating()
     {
-        hunger -= 3;
+        hunger -= 4;
         if (hunger < 0)
         {
             hunger = 0;
@@ -48,21 +54,21 @@ public class Tamagotchi
 
 
 
-    
-        
-    
 
 
 
 
-    
+
+
+
+
 
     public void Talk()
     {
         int wordNum = generator.Next(words.Count);
         Console.WriteLine($"{name} says {words[wordNum]}");
         Console.ReadLine();
-        
+
     }
 
     public bool GetAlive()
@@ -88,6 +94,10 @@ public class Tamagotchi
     {
         Console.WriteLine($"Name:{name} ---- Hunger:{hunger} ---- Bored:{bored} ---- learned words:{words.Count}");
     }
+
+    
+
+
 
 
 }
