@@ -95,7 +95,32 @@ public class Tamagotchi
         Console.WriteLine($"Name:{name} ---- Hunger:{hunger} ---- Bored:{bored} ---- learned words:{words.Count}");
     }
 
-    
+
+    public void Gretings()
+    {
+        Console.WriteLine("Guten tag, welcome to Tamagotchi");
+        Console.WriteLine("Pick which tamagatchi to hang out with");
+        Console.WriteLine("Rex, Cody, Wolf");
+
+    }
+
+    public void takingCareOfT()
+    {
+        stats();
+        Console.WriteLine("Now what do you want to do?");
+        Console.WriteLine($"1. Teach {name} a new word");
+        Console.WriteLine($"2. Play {name}");
+        Console.WriteLine($"3. Feed {name}");
+        Console.WriteLine($"4. Talk to {name}");
+        Console.WriteLine($"5. Do nothing");
+        Console.WriteLine($"6. Visit other Tamagotchi");
+    }
+
+   public void dead()
+   {
+            Console.WriteLine($"{name} died ");
+
+   }
 
 
 

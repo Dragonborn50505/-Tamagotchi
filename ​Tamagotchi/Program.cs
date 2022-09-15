@@ -24,10 +24,7 @@ tamagotchis.Add(new Tamagotchi());
 
 
 Tamagotchi t1 = tamagotchis[0];
-
-Console.WriteLine("Guten tag, welcome to Tamagotchi");
-Console.WriteLine("Pick which tamagatchi to hang out with");
-Console.WriteLine("Rex, Cody, Wolf");
+t1.Gretings();
 string Who = Console.ReadLine();
 
 
@@ -52,14 +49,7 @@ while (t1.GetAlive() == true)
     //t1.name = tamas.name
 
     Console.Clear();
-    t1.stats();
-    Console.WriteLine("Now what do you want to do?");
-    Console.WriteLine($"1. Teach {t1.name} a new word");
-    Console.WriteLine($"2. Play {t1.name}");
-    Console.WriteLine($"3. Feed {t1.name}");
-    Console.WriteLine($"4. Talk to {t1.name}");
-    Console.WriteLine($"5. Do nothing");
-    Console.WriteLine($"6. Visit other Tamagotchi");
+    t1.takingCareOfT();
     string whatDo = Console.ReadLine();
 
 
@@ -107,7 +97,7 @@ while (t1.GetAlive() == true)
 
     if (t1.GetAlive() == false)
     {
-        Console.WriteLine($"{t1.name} died ");
+        t1.dead();
     }
 
 
